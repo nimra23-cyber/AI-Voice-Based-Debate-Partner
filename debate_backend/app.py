@@ -30,9 +30,8 @@ MAX_CHUNK_MS = 25_000
 load_dotenv()
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-
 if not GROQ_API_KEY:
-    raise ValueError("GROQ_API_KEY not found in .env")
+    print("Warning: GROQ_API_KEY missing")
 
 print("GROQ API Key loaded successfully")
 
